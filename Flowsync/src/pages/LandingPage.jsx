@@ -1,5 +1,6 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 const LandingPage = () => {
+    const navigate = useNavigate();
 
     return (
         <div className="flex flex-row items-left justify-left min-h-screen">
@@ -7,12 +8,12 @@ const LandingPage = () => {
                 <h1>FlowSync - Collab</h1>
             </div>
             <div>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => navigate('/login')}>
                     Login
                 </button>
             </div>
             <div>
-                <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={() => navigate('/signup')}>
                     Signup
                 </button>
             </div>
